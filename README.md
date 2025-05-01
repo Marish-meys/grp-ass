@@ -3,9 +3,9 @@
 Welcome to my personal portfolio website! This responsive site showcases my skills, projects, services, and contact information as a **Data Analyst** and **IT professional**.
 
 ## 🌐 Live Demo
-You can host this website using platforms like GitHub Pages or Netlify.
+(https://marish-meys.github.io/grp-ass/)
 
-## 📁 Project Structure
+
 
 
 ## 🧩 Sections Included
