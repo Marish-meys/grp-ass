@@ -1,0 +1,468 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+    animation: popIn 1.5s ease-out, slideDownBounce 2s ease-in-out;
+  }
+  
+  /* Pop-In Effect */
+  @keyframes popIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Slide Down + Bounce Effect */
+  @keyframes slideDownBounce {
+    0% {
+      transform: translateY(-100px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    70% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Header */
+  header {
+    background: #B17F59;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn {
+    background: #00b894;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .btn-outline {
+    padding: 10px 20px;
+    border: 2px solid #00b894;
+    color: #00b894;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #A5B68D;
+    text-align: center;
+    animation: popIn 1.5s ease-out 1;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-image img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  
+  /* Typing Animation for Bio */
+  .bio-typing {
+    display: inline-block;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00b894;
+    width: 0;
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  /* About Section */
+  .about, .services, .skills {
+    padding: 60px 0;
+    animation: popIn 1.5s ease-out 1;
+    background-color: #C1CFA1;
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .about-image img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  
+  .service-card {
+    background: #EDE8DC;
+    padding: 30px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .skill-category {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .skill-category h3 {
+    margin-bottom: 20px;
+  }
+  
+  .skill-category ul {
+    list-style: none;
+  }
+  
+  .skill-category ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Section */
+  footer {
+    background: #B17F59;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .social-links a:hover {
+    color: #00b894;
+  }
+  
+  /* Contact Form Section */
+  .contact {
+    padding: 60px 0;
+    background: #EDE8DC;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #00b894;
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    padding: 12px 20px;
+    background: #00b894;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  button[type="submit"]:hover {
+    background: #00a88f;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .hero-image img {
+      width: 150px;
+    }
+  
+    .service-cards {
+      flex-direction: column;
+    }
+  
+    .service-card {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    .hero-text {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-image img {
+      width: 80%;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  /* Tablet Styles */
+  @media (max-width: 900px) {
+    .hero-image img {
+      width: 250px;
+    }
+  
+    .service-card {
+      width: 45%;
+    }
+  }           
+  /* Desktop Styles */            
+  @media (min-width: 901px) {
+    .hero-image img {
+      width: 350px;
+    }
+  
+    .service-card {
+      width: 30%;
+    }
+  }
+  /* Dark Mode Styles */  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #333;
+      color: #fff;
+    }
+  
+    header {
+      background: #444;
+    }
+  
+    .hero {
+      background: #555;
+    }
+  
+    .about, .services, .skills {
+      background-color: #666;
+    }
+  
+    footer {
+      background: #444;
+    }
+  
+    .service-card {
+      background: #777;
+    }
+  }
+  /* Light Mode Styles */
+  @media (prefers-color-scheme: light) {
+    body {
+      background: #fff;
+      color: #333;
+    }
+  
+    header {
+      background: #B17F59;
+    }
+  
+    .hero {
+      background: #A5B68D;
+    }
+  
+    .about, .services, .skills {
+      background-color: #C1CFA1;
+    }
+  
+    footer {
+      background: #B17F59;
+    }
+  
+    .service-card {
+      background: #EDE8DC;
+    }
+  }
+  /* Print Styles */
+  @media print {
+    body {
+      background: #fff;
+      color: #000;
+    }
+  
+    header, footer {
+      display: none;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  
+    .hero, .about, .services, .skills, .contact {
+      padding: 0;
+      margin: 0;
+    }
+  
+    .hero-image img,
+    .about-image img {
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    form {
+      display: block;
+    }
+  }
+  /* Print styles for form elements */
+  @media print {
+    form {
+      display: block;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    .form-group label {
+      font-size: 1.2rem;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border: none;
+      background: #f0f0f0;
+      padding: 5px;
+      font-size: 1rem;
+    }
+  
+    button[type="submit"] {
+      display: none;
+    }
+  }
+  /* End of CSS */

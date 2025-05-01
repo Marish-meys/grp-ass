@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo">UI Portfolio</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm Anis Ismael</h1>
+        <h2>Data Analyst</h2>
+        <p>I love analyzing data and coming up with the best solutions for critical situations.</p>
+        <div class="hero-buttons"><br>
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="#about" class="btn-outline">My Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="./images/WhatsApp Image 2025-04-28 at 11.13.46_513af679.jpg" alt="Profile Photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container about-content">
+      <div class="about-image">
+        <img src="./images/WhatsApp Image 2025-04-28 at 11.14.09_22c22004.jpg" alt="About Image">
+      </div>
+      <div class="about-text">
+        <h3>My Biography</h3>
+        <h2>IT professional with hands-on experience in Data Analysis</h2>
+        <div class="about-info">
+          <p><strong>Name:</strong> Anis Ismael</p>
+          <p><strong>Location:</strong> Nairobi, Kenya</p>
+          <p><strong>Email:</strong> anis345@gmail.com</p>
+          <p><strong>Phone:</strong> +254 746 890 251</p>
+        </div>
+        <div class="about-buttons"><br>
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="cv.pdf" download class="btn-outline">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>What I Do For You</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <h3>Data Analysis</h3>
+          <p>I specialize in interpreting complex datasets and creating interactive dashboards.</p>
+        </div>
+        <div class="service-card">
+          <h3>App Development</h3>
+          <p>Building user-friendly mobile applications for Android/iOS.</p>
+        </div>
+        <div class="service-card">
+          <h3>Photography</h3>
+          <p>Professional photoshoots and editing services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>My Featured Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>Dart (Flutter)</li>
+            <li>HTML/CSS</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Data Tools & Libraries</h3>
+          <ul>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+            <li>Seaborn</li>
+            <li>Power BI</li>
+            <li>Plotly</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Mobile App Development</h3>
+          <ul>
+            <li>Flutter</li>
+            <li>Dart</li>
+            <li>VS Code</li>
+            <li>Android Emulator</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Database Systems</h3>
+          <ul>
+            <li>MySQL</li>
+            <li>SQLite</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Anis Ismael. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
