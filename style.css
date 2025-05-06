@@ -5,11 +5,21 @@
   box-sizing: border-box;
 }
 
+/* Color Palette */
+:root {
+  --primary-color: #2A9D8F; /* Teal */
+  --secondary-color: #E9C46A; /* Mustard Yellow */
+  --accent-color: #264653; /* Dark Blue */
+  --background-color: #F4A261; /* Light Orange */
+  --text-color: #333;
+  --white: #fff;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: #fff;
-  color: #333;
+  background: var(--white);
+  color: var(--text-color);
   animation: popIn 1.5s ease-out, slideDownBounce 2s ease-in-out;
 }
 
@@ -53,8 +63,8 @@ body {
 
 /* Header */
 header {
-  background: #B17F59;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--white);
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -77,24 +87,40 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
 }
 
 .btn {
-  background: #00b894;
+  background: var(--secondary-color);
   padding: 10px 20px;
-  color: #fff;
+  color: var(--accent-color);
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c49f47;
 }
 
 .btn-outline {
   padding: 10px 20px;
-  border: 2px solid #00b894;
-  color: #00b894;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
   border-radius: 5px;
   text-decoration: none;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline:hover {
+  color: var(--white);
+  border-color: var(--white);
 }
 
 /* Hero Section */
@@ -103,7 +129,7 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #A5B68D;
+  background: var(--background-color);
   text-align: center;
   animation: popIn 1.5s ease-out 1;
 }
@@ -121,6 +147,7 @@ nav ul li a {
 .hero-image img {
   width: 300px;
   border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Typing Animation for Bio */
@@ -129,9 +156,10 @@ nav ul li a {
   font-size: 1.6rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #00b894;
+  border-right: 3px solid var(--secondary-color);
   width: 0;
   animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+  color: var(--accent-color);
 }
 
 @keyframes typing {
@@ -144,10 +172,12 @@ nav ul li a {
 }
 
 /* About Section */
-.about, .services, .skills {
+.about,
+.services,
+.skills {
   padding: 60px 0;
   animation: popIn 1.5s ease-out 1;
-  background-color: #C1CFA1;
+  background-color: var(--white);
 }
 
 .about-content {
@@ -159,21 +189,30 @@ nav ul li a {
 .about-image img {
   width: 300px;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .service-cards {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
 }
 
 .service-card {
-  background: #EDE8DC;
+  background: var(--white);
   padding: 30px;
   border-radius: 10px;
   width: 30%;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add some spacing between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Skills Section */
@@ -185,15 +224,17 @@ nav ul li a {
 }
 
 .skill-category {
-  background:  #EDE8DC;
+  background: var(--white);
+  color: var(--text-color);
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill-category h3 {
   margin-bottom: 20px;
+  color: var(--accent-color);
 }
 
 .skill-category ul {
@@ -206,8 +247,8 @@ nav ul li a {
 
 /* Footer Section */
 footer {
-  background: #B17F59;
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--white);
   padding: 30px 0;
   text-align: center;
 }
@@ -227,25 +268,27 @@ footer {
 }
 
 .social-links a {
-  color: #fff;
+  color: var(--white);
   margin: 0 10px;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #00b894;
+  color: var(--secondary-color);
 }
 
 /* Contact Form Section */
 .contact {
   padding: 60px 0;
-  background: #EDE8DC;
+  background: rgba(42, 157, 143, 0.1); /* Semi-transparent primary color */
 }
 
 .contact h2 {
   text-align: center;
   margin-bottom: 40px;
+  color: var(--accent-color);
 }
 
 form {
@@ -264,6 +307,7 @@ form {
 .form-group label {
   font-size: 1.1rem;
   margin-bottom: 5px;
+  color: var(--text-color);
 }
 
 .form-group input,
@@ -276,22 +320,23 @@ form {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #00b894;
+  border-color: var(--secondary-color);
   outline: none;
 }
 
 button[type="submit"] {
   padding: 12px 20px;
-  background: #00b894;
+  background: var(--secondary-color);
   border: none;
-  color: #fff;
+  color: var(--accent-color);
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.2rem;
+  transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background: #00a88f;
+  background: #c49f47;
 }
 
 /* Responsive Design */
@@ -314,6 +359,7 @@ button[type="submit"]:hover {
     margin-bottom: 20px;
   }
 }
+
 /* Mobile Styles */
 @media (max-width: 600px) {
   .hero-text {
@@ -334,6 +380,7 @@ button[type="submit"]:hover {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
+
 /* Tablet Styles */
 @media (max-width: 900px) {
   .hero-image img {
@@ -343,8 +390,9 @@ button[type="submit"]:hover {
   .service-card {
     width: 45%;
   }
-}           
-/* Desktop Styles */            
+}
+
+/* Desktop Styles */
 @media (min-width: 901px) {
   .hero-image img {
     width: 350px;
@@ -354,7 +402,8 @@ button[type="submit"]:hover {
     width: 30%;
   }
 }
-/* Dark Mode Styles */  
+
+/* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
   body {
     background: #333;
@@ -369,7 +418,9 @@ button[type="submit"]:hover {
     background: #555;
   }
 
-  .about, .services, .skills {
+  .about,
+  .services,
+  .skills {
     background-color: #666;
   }
 
@@ -381,33 +432,37 @@ button[type="submit"]:hover {
     background: #777;
   }
 }
+
 /* Light Mode Styles */
 @media (prefers-color-scheme: light) {
   body {
-    background: #fff;
-    color: #333;
+    background: var(--white);
+    color: var(--text-color);
   }
 
   header {
-    background: #B17F59;
+    background: var(--primary-color);
   }
 
   .hero {
-    background: #A5B68D;
+    background: var(--background-color);
   }
 
-  .about, .services, .skills {
-    background-color: #C1CFA1;
+  .about,
+  .services,
+  .skills {
+    background-color: var(--white);
   }
 
   footer {
-    background: #B17F59;
+    background: var(--accent-color);
   }
 
   .service-card {
-    background: #EDE8DC;
+    background: var(--white);
   }
 }
+
 /* Print Styles */
 @media print {
   body {
@@ -415,7 +470,8 @@ button[type="submit"]:hover {
     color: #000;
   }
 
-  header, footer {
+  header,
+  footer {
     display: none;
   }
 
@@ -423,7 +479,11 @@ button[type="submit"]:hover {
     width: 100%;
   }
 
-  .hero, .about, .services, .skills, .contact {
+  .hero,
+  .about,
+  .services,
+  .skills,
+  .contact {
     padding: 0;
     margin: 0;
   }
@@ -438,6 +498,7 @@ button[type="submit"]:hover {
     display: block;
   }
 }
+
 /* Print styles for form elements */
 @media print {
   form {
@@ -465,4 +526,5 @@ button[type="submit"]:hover {
     display: none;
   }
 }
+
 /* End of CSS */
